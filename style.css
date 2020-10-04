@@ -1,0 +1,19 @@
+body{
+    background-color: #c8c8c8;
+}
+
+.nav-extended{
+    background-image:url("imagem/capa.jpg");
+    background-size: cover;
+    background-blend-mode:soft-light;
+}
+
+nav ul a:hover{
+    border-bottom: solid 2px white;
+}
+
+.nav-header h1{
+    text-shadow: 2px 2px 8px black;
+    text-transform: uppercase;
+    font-family: fantasy;
+}
