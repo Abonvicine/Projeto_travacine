@@ -3,16 +3,21 @@
 $rota = $_SERVER["REQUEST_URI"];
 $metodo = $_SERVER["REQUEST_METHOD"];
 
+require "./controller/filmescontroller.php";
+
 switch($rota){
     case "/":
-        require "galeria.php";
+        require "view/galeria.php";
         break;
     case "/novo":
-        if ($metodo == "GET") require "cadastro.php";
-        if ($metodo == "POST") require "inserir_filme.php";
+        if ($metodo == "GET") require "view/cadastro.php";
+        if ($metodo == "POST"){
+            $controller = new FilmeController();
+            $controller->save($_REQUEST);
+        };
         break;
     default: 
-        require "404.php";
+        require "view/404.php";
         break;
 }
 

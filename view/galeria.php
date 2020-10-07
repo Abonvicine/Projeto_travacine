@@ -2,13 +2,13 @@
 
 <?php
 
-session_start();
+//session_start();
 
-require "./repositório/RepositórioPDO.php";
+//require "./repositório/RepositórioPDO.php";
 require "./util/msg.php";
 
-$Repositorio_filmes = New Filmes_rep_PDO();
-$filmes = $Repositorio_filmes->listartodos();
+$controller = new FilmeController();
+$filmes = $controller->index();
 
 ?>
 
